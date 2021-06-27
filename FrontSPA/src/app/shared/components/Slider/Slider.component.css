@@ -1,0 +1,9 @@
+.slider-view-container{
+    overflow-x: scroll;
+    cursor: pointer;
+}
+ .slider-view-container::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  
+  }

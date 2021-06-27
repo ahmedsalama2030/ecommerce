@@ -1,0 +1,49 @@
+<!-- product-detail start -->
+<section class="product-detail my-3">
+    <div class="row">
+        <!-- row start -->
+        <div class="col-12 col-sm-12 col-md-4 col-lg-3  mt-2" style="height:80vh">
+            <!-- div gallary -->
+            <eg-gallary  [productImages]="product?.productImages"></eg-gallary>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-6 mt-2 ">
+            <!-- div description start-->
+<!-- row start -->
+<div class="row ">
+    <div class="  product-description ">
+        <h2>{{(authService.sitelang=='en')?product?.name:product?.nameAr}}</h2>
+        <p class="desctiption " [innerHtml]="authService.sitelang=='en'?product?.disctription?.replace(':',' ') :product?.disctriptionAr?.replace(':',' ') " >
+            
+         </p> 
+    </div>
+    
+</div>
+<!-- row end -->        </div><!-- div description end -->
+        <div class="col-12 col-sm-12 col-md-12 col-lg-3  mt-2 text-center">
+            <div class="shopping">
+                <div class="discount">
+                    <p>  {{authService.sitelang=='ar'? product?.discount?.toLocaleString('ar-EG') +"جنية" :product?.discount+" EGP"}} </p>
+                 </div>
+                <div class="price">
+                    <p>{{ product?.price  }} <small>{{authService.sitelang=='ar'?'جنية':'EGP'}}</small></p>
+                </div>
+                 
+                <div class="count"></div>
+                <div class="button-add-cart text-center ">
+                    <span (click)="addToCart(product?.id)" class="cart-button" translate>productDetail.add to cart</span>
+                </div>
+
+                <div class="short-description text-capitalize ">
+                    <p translate>productDetail.Satisfaction 100% Guaranteed</p>
+                     <p> {{authService.sitelang=='ar'? product?.returnDays?.toLocaleString('ar-EG') :product?.returnDays}}  <span translate>productDetail.days to Return</span> </p>
+                </div>
+            </div>
+        </div>
+    
+
+     
+
+
+</div>
+
+</section> <!-- product-detail end -->

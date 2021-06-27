@@ -1,0 +1,15 @@
+1- json Error 
+====================> solve <=====================
+       services.AddControllers()
+                .AddNewtonsoftJson(options =>
+                {
+                      options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                });
+===================================>
+    // "DefaultConnection":"Data Source=BackEnd.db"
+
+     "ConnectionStrings":{
+     
+    "DefaultConnection":"Data Source=BackEnd.db"
+   
+   },

@@ -1,0 +1,28 @@
+
+
+
+
+ 
+  <eg-top-title></eg-top-title>
+  <div class="box-container"> 
+  <!--   title end-->
+  <!-- header start -->
+   <eg-navbar></eg-navbar>  
+  <!-- header end -->
+
+  
+
+
+  <!-- main-content start -->
+  <main class="main-content p-0 " [ngClass]="authService.dir"  >
+   
+     <router-outlet></router-outlet>
+     
+  </main>
+  <!-- main-content end -->
+  
+  <!--footer start -->
+</div>
+  <eg-footer></eg-footer> 
+  <eg-top-scroll></eg-top-scroll> 
+ 

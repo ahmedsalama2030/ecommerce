@@ -1,0 +1,38 @@
+<div class="wish-list bg-light p-1 p-md-3 p-lg-5 text-capitalize">
+  <div class="table-responsive">
+    <table class="table  ">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" translate>order.product count</th>
+            <th scope="col" translate>order.price</th>
+            <th scope="col" translate>order.date order</th>
+            <th scope="col"translate>order.Payment type</th>
+            <th scope="col"> </th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr class="orderow" *ngFor="let order of orders;let i=index trackBy:getid">
+            <td >{{i+1}}</td>
+            <td>{{order.totalProduct}}</td>
+            <td>{{order.totalPrice }}</td>
+            <td>{{order.dateOrder | date:'short' }}</td>
+            <td>{{ (order.isPaidOnline?"online":"on deleivery") |translate }}</td>
+            <td class="cancel text-danger"><span class="">cancel</span></td>
+
+          </tr>
+ 
+         
+        </tbody>
+        
+         
+        
+      </table> 
+    </div>
+       <div class="d-flex justify-content-center mt-2">
+         
+        <pagination (pageChanged)="pageChanged($event)" [itemsPerPage]="pagination!.itemPerPage"
+                            [totalItems]="pagination!.totalItems" previousText="&lsaquo;" nextText="&rsaquo;">
+         </pagination>
+      </div>
+</div> 

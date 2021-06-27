@@ -1,0 +1,151 @@
+<!-- shop-filter start -->
+<section class="shop-filter">
+    <div class="row ">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-2 filters ">
+            <!-- category start -->
+            <div class="category">
+                <h6 translate class="title" [ngClass]="{'en': lang==='en','ar': lang==='ar'}">shopFilter.by category</h6>
+                <ul>
+                    <li *ngFor="let category of categories">
+                        <span
+                            (click)="filterCategory(category.id)">{{lang=="en"?category.name:category.nameAr}}</span>
+                    </li>
+                    <li class="more" *ngIf="showcategory"> <span (click)="moreCategory()" translate>shopFilter.More</span></li>
+                    <li class="more" *ngIf="!showcategory"> <span (click)="moreCategory() " translate>shopFilter.Category</span></li>
+                </ul>
+
+            </div> <!-- category end -->
+
+            <!-- filter-price start -->
+            <div class="filter-price">
+                <h6  translate class="title" [ngClass]="{'en': lang==='en','ar': lang==='ar'}">shopFilter.by price</h6>
+
+                <div class="numbers text-lg-center">
+                    <form #priceFilter="ngForm" (ngSubmit)="pricsFilterRange()">
+                      <input  min="0" max="10000" name="from" [(ngModel)]="priceModel.from"type="number" class=" d-md-block   btn-price " value={{priceFrom}} required />
+                    <div class=" text-bold    mx-2 d-md-inline-block ml-1">to</div>
+                    <input min="0" max="10000" name="to" [(ngModel)]="priceModel.to"class="d-md-inline-block  btn-price" type="number" value={{priceTo}} required />
+                     <button [disabled]="!priceFilter.valid" type="submit" disabled   class="mt-3 mx-2 d-block   text-bold btn btn-lg pricebtn  " ><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+            </div> <!-- filter-price end -->
+            <!-- filter-brandstart -->
+            <div class="filter-brand">
+                <h6   class="title" [ngClass]="{'en': lang==='en','ar': lang==='ar'}" translate>shopFilter.by brand</h6>
+                <ul class="brand">
+                    <li *ngFor="let brand of brands"><span (click)="filterBrands(brand)"translate>{{brand}}</span></li>
+                    <li class="more" *ngIf="showBrand"> <span (click)="moreBrands()" translate>shopFilter.More</span></li>
+                    <li class="more" *ngIf="!showBrand"> <span (click)="moreBrands()" translate>shopFilter.Brands</span></li>
+
+                </ul>
+
+
+            </div> <!-- filter-brand end -->
+            <!-- filter-color end -->
+            <div class="filter-color">
+                <h6 translate class="title" [ngClass]="{'en': lang==='en','ar': lang==='ar'}">shopFilter.by color</h6>
+                <div class="color">
+                    <div (click)="colorFilter('black')" class="balck">
+                        <img src="assets/img/shopfilter/black.svg" alt="black">
+                        <span translate>shopFilter.black</span>
+
+                    </div>
+                    <div (click)="colorFilter('white')">
+                        <img src="assets/img/shopfilter/white.svg"  class="border" alt="white">
+                        <span translate>shopFilter.white</span>
+
+                    </div>
+                    <div (click)="colorFilter('blue')">
+                        <img src="assets/img/shopfilter/blue.svg" alt="blue">
+                        <span translate>shopFilter.blue</span>
+
+                    </div>
+                    <div (click)="colorFilter('grey')">
+                        <img src="assets/img/shopfilter/grey.svg" alt="grey">
+                        <span translate>shopFilter.grey</span>
+
+                    </div>
+                    <div (click)="colorFilter('red')">
+                        <img src="assets/img/shopfilter/red.svg" alt="red">
+                        <span translate>shopFilter.red</span>
+
+                    </div>
+                    <div (click)="colorFilter('silver')">
+                        <img src="assets/img/shopfilter/silver.svg" alt="silver">
+                        <span translate>shopFilter.silver</span>
+
+                    </div>
+                    <div (click)="colorFilter('pink')">
+                        <img src="assets/img/shopfilter/pink.svg" alt="pink">
+                        <span translate>shopFilter.pink</span>
+
+                    </div>
+                    <div (click)="colorFilter('gold')">
+                        <img src="assets/img/shopfilter/gold.svg" alt="gold">
+                        <span translate>shopFilter.gold</span>
+
+                    </div>
+                    <div (click)="colorFilter('other')">
+                        <img src="assets/img/shopfilter/multicolour.svg" alt="muli color">
+                        <span translate>shopFilter.muli color</span>
+
+                    </div>
+                </div>
+
+            </div> <!-- filter-color end -->
+        </div>
+        <!-- product-view start-->
+        <div class="col-12 col-sm-12 col-md-9 col-lg-10  product-view ">
+            <div class="container-fluid   px-4">
+                <div class="row justify-content-between header mb-3 ">
+                    <div class="col p-0">
+                        <span translate class="name">shopFilter.products found</span>
+                        <span   class="total">{{ pagination!.totalItems}}</span>
+
+                    </div>
+                    <div class="col    p-0" [ngClass]="{'en': lang==='en','ar': lang==='ar'}">
+                        <li  class="name sort  list-unstyled">   <span translate>shopFilter.sort by</span>  <span class="mx-1">{{sortChoice}}</span> 
+                            <i class="fa fa-filter" aria-hidden="true"></i>
+                        
+                        <ul class="list-filter" [ngClass]="{'rightPosition': lang==='en','leftPosition': lang==='ar'}">
+                            <li  (click)="sortName()" translate>shopFilter.name</li>
+                            <li translate (click)="sortPrice('des')" translate>shopFilter.pricehigh</li>
+                            <li  translate (click)="sortPrice('asc')" translate>shopFilter.pricelow</li>
+                        </ul>
+                    </li>
+                    </div>  
+
+                </div>
+                <div class=" product ">
+                    <!-- row start-->
+                    <div  *ngFor="let product of products">
+                          <div (dblclick)="nagivate(product.id)">
+                        <eg-product [productDefault]="product"></eg-product>
+                    </div>
+                    </div>
+
+                   
+
+
+                </div> <!-- row end-->
+                <div [hidden]="products?.length!=0">
+                    <p class="text-center text-capitalize bold text-main h3" translate>shopFilter.no product found</p>
+                   </div>
+                <div class="row  mt-3 mb-1 justify-content-center">
+                    <div style="width: auto;" [hidden]="products?.length==0">
+                        <pagination (pageChanged)="pageChanged($event)" [itemsPerPage]="pagination!.itemPerPage"
+                            [totalItems]="pagination!.totalItems" previousText="&lsaquo;" nextText="&rsaquo;">
+                        </pagination>
+
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- product-view end-->
+
+    </div>
+
+    <div class="row">
+        <!-- <eg-latest-product></eg-latest-product> -->
+    </div>
+</section><!-- shop-filter end -->

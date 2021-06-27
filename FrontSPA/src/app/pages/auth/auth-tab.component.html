@@ -1,0 +1,27 @@
+<!-- auth start -->
+<div class="auth" [ngClass]="direction"  >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-7 col-md-12 col-sm-12  content-form d-flex justify-content-center align-items-center">
+        <eg-login *ngIf="toggleForm" [toggleForm]="toggleForm"  (registerForm)="changeAuthToggle($event)"></eg-login>
+        <eg-sign-up *ngIf="!toggleForm" [toggleForm]="toggleForm"  (loginForm)="changeAuthToggle($event)"></eg-sign-up>
+
+      </div>
+      <div class="col-lg-5 d-md-none d-sm-none  d-none d-lg-block bg-container">
+        <div class="bg-img d-flex justify-content-center align-items-center">
+          <div class="info">
+            <div class="buttons">
+              <span class="login btn " translate (click)="toggleAuth()" [ngClass]="{'active': toggleForm}">auth.login</span>
+              <span class="register btn "   (click)="toggleAuth()" [ngClass]="{'active': !toggleForm}" translate>auth.new</span>
+            </div>
+            <h3 class="header" translate>auth.Welcome to Cash</h3>
+            <p class="text" translate>auth.Safe shopping, pay on delivery, fast shipping, easy returns within 15 days</p>
+          <a [routerLink]="[ '/']" class="shopnow btn" translate>auth.shop now</a>
+          </div>
+        </div>
+      </div> 
+
+    </div>
+  </div>
+
+</div><!-- auth end  -->

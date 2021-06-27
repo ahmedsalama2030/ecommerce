@@ -1,0 +1,50 @@
+
+      <div  *ngIf="productDefault;then default else nodefault"> </div>
+
+    <ng-template #default>
+      <div class="product-container">
+        
+     
+         <div class="product " >
+          <img class="product-img" onerror="this.src='assets/img/top/noImage.png'"  [src]='productDefault?.imageMain' alt=""       alt="{{authService.dir=='ltr'?productDefault?.name:productDefault?.nameAr}}">
+          <div class="price">
+            <p class="short-discription" >{{authService.dir=='ltr'?productDefault?.name?.substring(0,25):productDefault?.nameAr?.substring(0,25)}}  </p>
+            <span class="new-price ">{{productDefault?.price |currency}}</span>
+           <span class="old-price mx-2">{{productDefault?.discount}}</span>
+           </div>
+        
+          
+        </div>
+         
+        <div class="add-cart">
+          <span  egLang (event)='$event.stopPropagation()'  (click)="addCart(productDefault?.id)" class=" cart-button">add to cart</span> 
+          <a><i class="far fa-heart mx-3 cart-favorite" aria-hidden="true"></i></a>
+        
+        </div>
+      </div>
+     </ng-template>
+    <ng-template #nodefault>
+      <div class="product-container">
+        
+         <div class="product text-center" >
+          <img class="product-img" onerror="this.src='assets/img/top/noImage.png'"  [src]='product?.productImageMain' alt=""       alt="{{authService.dir=='ltr'?productDefault?.name:productDefault?.nameAr}}">
+          <div class="price">
+            <p class="short-discription" >{{authService.dir=='ltr'?product?.productName?.substring(0,20):product?.productNameAr?.substring(0,20)}}  </p>
+            <span class="new-price "> 
+              {{authService.sitelang=='ar'? product?.productPrice?.toLocaleString('ar-EG') +" جنية " :product?.productPrice +" EGP"}} 
+            </span>
+           <span class="old-price mx-2"> 
+            {{authService.sitelang=='ar'? discount.toLocaleString('ar-EG') +" جنية " :discount +" EGP"}}  </span>
+         
+           </div>
+         
+            <a  (dblclick)='$event.stopPropagation()'  class="favorite"><i class="far fa-heart mx-3 cart-favorite" aria-hidden="true"></i></a>
+             <a [ngClass]="{'active': product!.isShop}" (dblclick)='$event.stopPropagation()'   #card egLang (click)="addCart(product?.productId)" class="  cart"><i class="fa fa-cart-plus mx-3 cart-add " aria-hidden="true"></i></a>
+ 
+        </div>
+          
+         
+      </div>
+
+     </ng-template>
+    

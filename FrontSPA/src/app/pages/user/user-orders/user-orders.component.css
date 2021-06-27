@@ -1,0 +1,13 @@
+.cancel{
+    visibility: hidden;
+    cursor: pointer;
+}
+.orderow:hover  .cancel{
+    visibility: visible;
+}
+table td{
+    vertical-align: middle;
+}
+.table-responsive::-webkit-scrollbar{
+    height: 0;
+}

@@ -1,0 +1,50 @@
+<div class="form text-center text-capitalize">
+    <a  [routerLink]="[ '/' ]" class="logo" translate>auth.Cash </a>
+    <h3 translate>auth.create new an account</h3>
+      <form [formGroup]="signupForm" (ngSubmit)="signup()" >
+       <div class="mb-3">
+            <input formControlName="userName"  type="text" class="form-control" placeholder="{{lang=='en'?'user name':'إسم المستخدم'}}"
+             [ngClass]="{'is-invalid':username?.errors&&username?.touched,
+              'is-valid':!username?.errors&&username?.touched
+            }">
+           
+            <div class="invalid-feedback" *ngIf="username?.touched && username?.hasError('required')" translate>auth.field is required  </div>
+          
+          </div>
+      <div class="mb-3">
+         <input formControlName="email"  type="email" class="form-control" placeholder="{{lang=='en'?'email':'الإيميل '}}" [ngClass]="{'is-invalid':email?.errors&&email?.touched,'is-valid':!email?.errors&&email?.touched}">
+           
+        <div class="invalid-feedback" *ngIf="email?.touched && email?.hasError('required')" translate>auth.field is required  </div>
+        <div class="invalid-feedback" *ngIf="email?.touched && email?.hasError('pattern')" translate>auth.email invalid  </div>
+      
+      </div>
+      <div class="mb-3">
+        <input formControlName="password"   type="password" class="form-control" placeholder="{{lang=='en'?'password':'كلمة المرور'}}" [ngClass]="{'is-invalid':password?.errors&&password?.touched,'is-valid':!password?.errors&&password?.touched}">
+        <div class="invalid-feedback" *ngIf="signupForm?.get('password')?.touched && password?.hasError('required')" translate>auth.field is required  </div>
+        <div class="invalid-feedback" *ngIf="signupForm?.get('password')?.touched && password?.hasError('minlength')" translate>auth.the password must has min 4 character  </div>
+         
+      </div>
+      <div class="mb-3">
+        <input formControlName="repassword" type="password" class="form-control" placeholder="{{lang=='en'?'re password':'تأكيد كلمة المرور'}}" [ngClass]="{'is-invalid':rePassword?.errors&&rePassword?.touched,'is-valid':!rePassword?.errors&&rePassword?.touched}">
+        <div class="invalid-feedback" *ngIf="rePassword?.touched && rePassword?.hasError('required')" translate>auth.field is required   </div>
+        <div class="invalid-feedback" *ngIf="rePassword?.touched && rePassword?.hasError('mustMatch')" translate>auth.the password and repassword not match </div>
+      </div>
+      <div   class="text-danger my-1" translate >{{errorMassage}}</div>
+
+      <div class="mb-3 forgot ">
+       <span (click)="gologin()"  translate>auth.have an account</span>
+        </div>
+      <button [disabled]="!signupForm.valid" type="submit" class="btn submit"  > 
+
+        <span [hidden]="loader" class="px-2">
+          <span translate class="text-capitalize" translate>auth.send</span>
+      </span>
+
+        <span translate [hidden]="!loader" >
+          <span translate class="mx-1">wait</span> 
+          <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+        </span>
+
+      </button>
+    </form>
+  </div>

@@ -1,0 +1,9 @@
+D:\projects\ecommerce\BackEnd.API\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+D:\projects\ecommerce\BackEnd.API\Core\bin\Debug\netcoreapp3.1\Core.dll
+D:\projects\ecommerce\BackEnd.API\Core\bin\Debug\netcoreapp3.1\Core.pdb
+D:\projects\ecommerce\BackEnd.API\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
+D:\projects\ecommerce\BackEnd.API\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+D:\projects\ecommerce\BackEnd.API\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+D:\projects\ecommerce\BackEnd.API\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+D:\projects\ecommerce\BackEnd.API\Core\obj\Debug\netcoreapp3.1\Core.dll
+D:\projects\ecommerce\BackEnd.API\Core\obj\Debug\netcoreapp3.1\Core.pdb

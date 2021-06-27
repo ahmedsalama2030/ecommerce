@@ -1,0 +1,19 @@
+<div class="row header justify-content-between align-items-center">
+  <div class="col">
+      <h5  >{{name |translate}}</h5>
+  </div>
+  <div class="col  d-none  d-sm-none d-md-block" [ngClass]="{'text-start': authService.dir=='rtl','text-end': authService.dir=='ltr'}" >
+   <div  *ngIf="authService.dir==='rtl';then ar else en">
+        
+   </div>  
+  <ng-template #en>
+    <span  (click)="decrement()" ><i class="fa fa-angle-left "   aria-hidden="true"  ></i></span>
+    <span      (click)="increment()" ><i class="fa fa-angle-right"    aria-hidden="true"  ></i></span>
+   </ng-template>
+  <ng-template  #ar>
+    <span  (click)="decrement()" ><i class="fa fa-angle-right"   aria-hidden="true"  ></i></span>
+  <span    (click)="increment()" ><i class="fa fa-angle-left"   aria-hidden="true"  ></i></span>
+  
+  </ng-template>
+    </div> 
+</div>

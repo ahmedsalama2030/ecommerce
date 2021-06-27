@@ -1,0 +1,99 @@
+.heading .title{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.heading .result-update{
+text-decoration: capitalize;
+color: var(--bs-primary);
+}
+ 
+.heading .badge{
+    background-color: var(--bs-primary);
+}
+.prodect-detail {
+    box-shadow:2px 2px 5px  var(--gray-3),-2px -2px 5px  var(--gray-3);
+padding: 2rem 1rem;;
+}
+.prodect-detail img{
+    height: 100%;
+    width: 100%;
+}
+.prodect-detail .deccription p{
+text-transform: capitalize;
+font-size:1rem;
+color: var(--gray-6);
+
+}
+.prodect-detail .price-quntity .price{
+color: var(--bs-primary);
+font-weight: bold;
+}
+.prodect-detail .price-quntity .quntity  {
+    font-size:1rem;
+    font-weight: bold;
+    text-transform: capitalize;
+
+}
+.prodect-detail .price-quntity .quntity  input[type="number"]{
+    /* width:40%; */
+    padding: 5px;;
+    border-radius: 5px;
+    outline:0;
+    border:2px solid var(--gray-4) !important;
+
+}
+.prodect-detail .price-quntity .quntity input:focus{
+    border:2px solid var(--bs-primary) !important;
+}
+
+.prodect-detail .time-arrive{
+    text-transform: capitalize;
+    font-size:1rem;
+    font-weight: bold;
+    color: var(--gray-6);
+}
+.prodect-detail .delete span:first-of-type{
+ color: red;
+ font-size: 1rem;
+ cursor: pointer;
+}
+.prodect-detail .delete span:first-of-type:hover{
+    color: var(--hover-1);
+   }
+
+   /* complete */
+   .complete{
+       padding: 2rem .5rem;
+    box-shadow:2px 2px 5px  var(--gray-3),-2px -2px 5px  var(--gray-3);
+
+   }
+   .complete .row{
+       margin: .5rem 0px;
+   }
+   .complete .row>div:first-of-type{
+       font-weight: bold;
+       font-size: 1rem;
+ 
+   }
+   .complete .row>div:last-of-type{
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--bs-primary);
+    text-align: end;
+
+}
+.complete .btn-complete a{
+    display: inline-block;
+ padding: 10px;
+ border: 1px solid var(--bs-primary);
+ width: 100%;
+ text-align: center;
+ border-radius: 10px;
+
+}
+.complete .btn-complete a:hover{
+   background-color: var(--bs-primary);
+   color:#fff;
+
+}
+   /* ./complete */

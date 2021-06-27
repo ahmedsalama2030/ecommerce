@@ -1,0 +1,17 @@
+.products{
+  overflow-x: auto;
+  overflow-y: hidden;
+   
+   }
+ img{
+  max-height: 200px;
+  min-height: 200px;
+  
+}
+.products::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background-color: #aaa; /* or add it to the track */
+}
+ 
+  

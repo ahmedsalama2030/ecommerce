@@ -1,0 +1,122 @@
+<!-- header start -->
+<header [@Fade]="IsShowHeader ? 'void' : '*'" #header class=" mt-0   " [ngClass]="authService.dir">
+    <div class="row align-items-center ">
+        <!-- menu start -->
+        <div class="col-12 col-sm-12 col-md-12 col-lg-2  menu    py-2 py-sm-3  ">
+            <span (click)="ShowCategoryMenu()" translate>home.categories</span>
+            <nav [@openClose]="isShowCategoryMenu ? 'void' : '*'">
+                <li *ngFor="let category of categoryMenu">
+                    <a (click)="(isShowCategoryMenu=false)" [routerLink]="[ '/shoping-filter' ]">
+                        <i class="fa {{category.icon}}" aria-hidden="true"> </i>
+                        <span>{{category.text | translate}}</span>
+                    </a>
+                </li>
+            </nav>
+            <!-- links bar responsive start-->
+            <span (click)="(show=!show)" class="d-inline d-sm-inline d-md-inline  d-lg-none button-navbar ">
+                <i class="fa fa-bars mx-2   " aria-hidden="true"></i>
+            </span><!-- links bar responsive end -->
+        </div> <!-- menu end -->
+        <!-- links start -->
+        <div class="col-8 links">
+            <nav class=" d-none d-sm-none d-md-none d-lg-flex  ">
+                <li>
+                    <a [routerLink]="['']" routerLinkActive="" class="px-3   py-2 py-sm-3    d-inline-block"> <span
+                            translate> home.home </span> </a>
+                </li>
+                <li> <a [routerLink]="['/blog' ]" routerLinkActive="active"
+                        class="px-3   py-2 py-sm-3    d-inline-block" translate> home.blog </a></li>
+                <li> <a [routerLink]="[ '/shoping-filter' ]" routerLinkActive="active"
+                        class="px-3   py-2 py-sm-3    d-inline-block" translate> home.shop </a></li>
+                <li> <a [routerLink]="[ '/contact-us' ]" routerLinkActive="active" class="px-3   py-2 py-sm-3    d-inline-block"
+                        translate> home.contact us </a></li>
+                <li> <a [routerLink]="[ '/shoping-cart' ]" routerLinkActive="active"
+                        class="px-3   py-2 py-sm-3    d-inline-block" translate> home.shoping-cart </a></li>
+
+            </nav>
+        </div>
+        <div class="col-2">
+            <div class="d-none   d-sm-none d-md-none d-lg-flex justify-content-around align-items-center">
+                <div class="btn-group" dropdown>
+                    <img class="border border-black rounded-circle p-1" width="50" height="50" [src]="userPhoto" alt=""
+                        dropdownToggle>
+
+                    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu text-center" role="menu"
+                        aria-labelledby="button-basic">
+
+                        <li *ngIf="!isLoggedIn" role="menuitem"><a class="dropdown-item h6" translate
+                                [routerLink]="[ '/auth' ]" translate>titletop.log in</a></li>
+                        <li *ngIf="!isLoggedIn" role="menuitem"><a class="dropdown-item h6" translate
+                                [routerLink]="[ '/auth' ]" translate>titletop.sign up</a></li>
+                        <li *ngIf="isLoggedIn" role="menuitem"><a class="dropdown-item h6" translate
+                                [routerLink]="[ '/user' ]" translate>home.my account</a></li>
+                        <li *ngIf="isLoggedIn" role="menuitem"><span (click)="LogOut()" class="dropdown-item h6"
+                                translate>titletop.log out</span></li>
+
+                    </ul>
+                </div>
+                <div class="">
+
+                    <a [routerLink]="[ '/shoping-cart' ]" class="cart">
+                        <i class="fa fa-cart-plus fa-2x " aria-hidden="true">
+                            <span class="" *ngIf="cart >0">{{cart }}</span>
+                        </i>
+                    </a>
+
+                </div>
+                <div>
+                    <a [routerLink]="[ '/user' ]" class="cart">
+                        <i class="fa fa-heart fa-2x " aria-hidden="true">
+                            <span>10</span>
+                        </i>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- links end -->
+    </div>
+</header><!-- header start -->
+<!-- menu-responsive start -->
+<div *ngIf="show" class="menu-responsive  d-lg-none  " (click)="(show=!show)">
+    <div class="row h-100">
+        <div class="col-10  col-lg-6 m-0 p-0 overlay" (click)="( $event.stopPropagation())">
+
+            <h4 class="py-2 py-sm-3 py-md-3 py-lg-4" translate>home.menu</h4>
+
+            <nav class="menu-container">
+                <li>
+                    <a  (click)="(show=false)" [routerLink]="[ 'home' ]" routerLinkActive="active"
+                        class="px-3   py-2 py-sm-3      d-inline-block" translate> home.home </a>
+                </li>
+                <li> <a  (click)="(show=false)" [routerLink]="[ '/blog' ]" routerLinkActive="active"
+                        class="px-3   py-2 py-sm-3    d-inline-block" translate> home.blog </a></li>
+                <li> <a   (click)="(show=false)" [routerLink]="[ '/shoping-filter' ]" routerLinkActive="active"
+                        class="px-3   py-2 py-sm-3    d-inline-block" translate> home.shop </a></li>
+                <li> <a  (click)="(show=!show)"  [routerLink]="[ '/contact-us' ]" routerLinkActive="active"
+                        class="px-3   py-2 py-sm-3    d-inline-block" translate> home.contact us </a></li>
+                <li> <a  (click)="(show=false)" [routerLink]="[ '/shoping-cart' ]" routerLinkActive="active"
+                        class="px-3   py-2 py-sm-3    d-inline-block" translate> home.shoping-cart </a></li>
+                <li>
+
+                    <a  (click)="(show=false)" [routerLink]="[ '/shoping-cart' ]"
+                        class="cart-responsive  px-3   py-2 py-sm-3    d-inline-block">
+                        <i class="fa fa-cart-plus   " aria-hidden="true"> </i>
+                        <span>{{cart  }}</span>
+                    </a>
+
+
+
+                </li>
+                <li>
+                    <a   (click)="(show=false)"[routerLink]="[ '/shoping-cart' ]" class="cart-responsive px-3   py-2 py-sm-3    d-inline-block">
+                        <i class="fa fa-heart  " aria-hidden="true"> </i> <span>{{10 }}</span>
+                    </a>
+            </nav>
+        </div>
+
+    </div>
+
+</div> <!-- menu-responsive end -->

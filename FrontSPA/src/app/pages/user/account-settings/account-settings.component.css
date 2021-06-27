@@ -1,0 +1,28 @@
+.btn{
+    background-color: var(--bs-primary);
+    color:#fff
+}
+.btn:hover{
+    background-color: var(--hover-1);
+
+}
+.icon,.message{
+    color: var(--bs-primary);
+
+}
+.upload-container{
+    position:relative;
+}
+.progress{
+    position:absolute;
+    bottom:0;
+    left:0;
+    height: 5px;
+    width: 100%;
+    background-color:#fff
+
+}
+.progress .progress-bar{
+
+background-color:var(--bs-primary)
+}

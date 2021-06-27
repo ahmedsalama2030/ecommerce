@@ -1,0 +1,22 @@
+
+<section class="main-carousel" >
+    
+    <div [@FadeCarousel]="isChange ? 'void' : '*'"     class="carousel">
+     
+      <div   class="box-image" >
+        <img  src ={{path}} alt="first slide" >
+       </div>
+       <div class="dots">
+      <ng-container *ngFor="let item of slider,let i=index">
+         <div (click)="nextSlide(i)" [ngClass]="{'active': indexPath===i}"   class="box-dot  "></div>
+      </ng-container>
+       
+         
+          
+       </div>
+
+    </div>
+     
+</section>
+
+ 

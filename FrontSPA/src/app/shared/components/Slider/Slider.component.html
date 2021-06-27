@@ -1,0 +1,18 @@
+<div>
+  <!--row first start -->
+   <div 
+  (scroll)="scrollGategory()"
+  (mousedown)="onMouseDown($event)"
+  (mouseleave)="onMouseLeave($event)"
+  (mouseup)="onMouseUp($event)"
+  (mousemove)="onMouseMove($event)"
+  (touchstart)="onMouseUp($event)"
+  (touchend)="onMouseUp($event)"
+  (touchcancel)="onMouseLeave($event)"
+  (touchmove)="onMouseMove($event)"
+  
+  class="slider-view-container d-flex   " #slideContainer>
+   <ng-content #sliderImages></ng-content>
+    </div>
+
+</div>

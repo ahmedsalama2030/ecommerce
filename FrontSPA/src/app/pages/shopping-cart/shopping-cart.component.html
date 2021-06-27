@@ -1,0 +1,89 @@
+<!-- cart start -->
+<section class="cart my-5">
+    
+    <div class="row justify-content-around align-items-center">
+        <div class=" col-12 col-md-6 order-2 order-md-1 my-2">
+            <div class="row heading">
+                <div class=" col-12 col-md-8 col-lg-6">
+                    <h4 class="title d-inline"><span translate>shoppingCart.shopping card</span>  <span class="badge bage-pill mx-1">  {{authService.sitelang=='ar'? (pagination?.totalItems)?.toLocaleString('ar-EG')   :pagination?.totalItems  }}  </span></h4>
+
+                </div>
+                <div class="col-6" >
+                    <h6  class="result-update  "  [ngClass]="{'text-end': authService.sitelang=='en','text-start': authService.sitelang=='ar'}">{{resultUpdate}}</h6>
+
+                </div>
+            </div>
+            <div *ngFor="let card of shoppingCard" class="row prodect-detail my-3">
+                <div class="col-12 col-lg-2  ">
+                    <img src='{{card.product.imageMain}}' class="  img-fluid w-100  m-auto" alt="">
+                </div>
+                <div class="col-12 col-lg-10  "> 
+                    <div class="deccription">
+                        <p> {{authService.sitelang=='en'?card?.product?.name:card?.product?.nameAr}}  </p>
+                    </div>
+                    <div class="d-flex flex-lg-row  flex-column justify-content-between price-quntity">
+                      <span class="price">{{authService.sitelang=='ar'? card.product.price.toLocaleString('ar-EG') +" جنية " :card.product.price +" EGP"}}    </span>
+                     
+                      <span class="quntity text-end  text-capitalize" > <span class="mx-1" translate>shoppingCart.quntity</span> 
+                          <input  name="quantity "    min="1" (change)="quantityChange(card.id,$event)"  type="number" class="w-25 text-center" [value]=    card.quantity>
+                      </span>
+                    
+                    </div>
+                   
+                    <div class="delete">
+                    <span  (click)="deleteShopCard(card.id)" > <i class="fa fa-trash " aria-hidden="true"></i>   <span translate class="text-capitalize mx-1" translate>delete</span></span>
+                    </div>
+
+                </div>
+             </div>
+
+             <div class="row  mt-3 mb-1 justify-content-center">
+                <div style="width: auto;" [hidden]="shoppingCard?.length==0">
+                    <pagination (pageChanged)="pageChanged($event)" [itemsPerPage]="pagination!.itemPerPage"
+                        [totalItems]="pagination!.totalItems" previousText="&lsaquo;" nextText="&rsaquo;">
+                    </pagination>
+
+                </div>
+
+            </div>
+            <div class="row  mt-3 mb-1 justify-content-center">
+                <div style="width: auto;" [hidden]="shoppingCard?.length!=0">
+                     <p class="h4 notFount" translate>shoppingCart.not product found</p>
+
+                </div>
+
+            </div>
+ 
+        </div>
+        <div class="col-12 col-md-3  order-1 order-md-2  my-2 bg-darken-1">
+            <div class="complete  ">
+                <div class="row" >
+                    <p translate class="text-capitalize text-center h4">shoppingCart.summary</p>
+                </div>
+         <div class="row text-capitalize" >
+            <div  translate class="col">shoppingCart.total  price</div>
+            <div class="col"> {{authService.sitelang=='ar'? totalPrice.toLocaleString('ar-EG') +" جنية " :totalPrice +" EGP"}}   </div>
+          </div>  
+         <div >
+              <div class="row text-capitalize " >
+            <div translate  class="col">shoppingCart.Shipping price</div>
+            <div class="col "> {{authService.sitelang=='ar'? shipppingPrice.toLocaleString('ar-EG') +" جنية " :shipppingPrice +" EGP"}}  </div>
+          </div> 
+          <div class="row  text-capitalize" >
+            <div  translate class="col">shoppingCart.finial price</div>
+            <div class="col  ">   {{authService.sitelang=='ar'? (totalPrice+shipppingPrice).toLocaleString('ar-EG') +" جنية " :(totalPrice+shipppingPrice) +" EGP"}}</div>
+          </div> 
+         
+          <div class="row mt-5 " >
+              <div class="col btn-complete text-capitalize">
+                  <a translate *ngIf="this.totalPrice!=0" [routerLink]="['/checkout']" [state]="{ price:(totalPrice+shipppingPrice)  }">shoppingCart.complete process</a>
+              </div>
+</div>
+
+          </div> 
+       </div>
+            </div>
+        </div>
+    
+</section><!-- cart end -->
+

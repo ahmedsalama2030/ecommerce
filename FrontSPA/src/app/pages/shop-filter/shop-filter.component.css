@@ -1,0 +1,251 @@
+.text-main{
+    color: var(--bs-primary);
+}
+.shop-filter{
+    margin: 2rem 0;
+}
+h6{
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+}
+.title{
+    font-weight: bold;
+    text-transform: capitalize; 
+    position: relative;
+    padding: 12px;
+     padding: 1rem 1rem 1rem 0;
+
+}
+.title::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+     background-color:var(--bs-primary);
+    height: 2px;
+    width:20%;
+    z-index: 2;
+}
+h6.ar::before{
+    right:0;
+}
+h6.en::before{
+    left:0;
+}
+.title::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left:0;
+    background-color:var(--gray-4);
+    height: 2px;
+    width:100%;
+    z-index: 1;
+    
+
+}
+
+/* filter-category  brand*/
+.filters ul,.numbers,.color{
+    padding:20px 20px;
+}
+.filters ul li{
+    line-height:2rem;
+
+}
+ul li{
+    color:var(--gray-4);
+    text-transform: capitalize;
+    cursor: pointer;
+
+}
+ul li span{
+    display: inline-block;
+    width: 100%;
+}
+ul li.more{
+ text-align: center;
+ color: var(--bs-primary);
+ cursor: pointer;
+
+
+}
+ul li span:hover{
+color: var(--bs-primary);
+}
+
+/* filter-price  start*/
+.numbers span{
+    text-transform: capitalize;
+    font-weight: bold;
+ }
+
+.filter-price .numbers input[type="number"]{
+    /* width:40%; */
+    padding: 5px;;
+    border-radius: 15px;
+    outline:0;
+    border:2px solid var(--gray-4) !important;
+    text-align: center;
+    width: 100%;
+
+}
+.filter-price .numbers input:focus{
+    border:2px solid var(--bs-primary) !important;
+  
+}
+.pricebtn{
+     padding:5px;
+    background-color:var(--bs-primary) !important; ;
+    color:#fff;
+    border-radius:3px;
+ cursor: pointer;
+ outline: 0;
+ border:0
+
+}
+.pricebtn:hover{
+    background-color:var(--hover-1) !important; ;
+}
+button:disabled {
+    background-color:var(--hover-1) !important; ;
+
+}
+/* filter-price  end*/
+/* filter-color start */
+.color{
+    display:flex;
+    flex-flow: wrap;
+ }
+ .color>div{
+     cursor: pointer;
+ }
+ .color>div:hover{
+    color:var(--bs-primary) !important; ;
+}
+.color>div:not(:last-of-type){
+    width: 50%;
+    margin-bottom: .5rem;
+}
+.color span{
+    margin: .5rem;
+}
+.chech-border{
+    border:2px solid var(--bs-primary);
+    padding: 2px;
+
+}
+/* filter-color end */
+
+/* product-view start */
+.header::before{
+    position: absolute;
+    content:'';
+    bottom:0;
+    left:0;
+    width:100%;
+    height:2px;
+  background-color: var(--gray-5);
+  
+}
+.product-view .header{
+    /* padding: 1rem 0; */
+    position: relative;
+    /* margin-bottom:1rem; */
+    padding: 0 0 .5rem 0;
+
+}
+.product-view .header .total{
+    color: var(--bs-primary);
+    font-weight: bold;
+    font-size: 1rem;
+
+}
+.product-view .header .name{
+    font-weight: bold;
+    margin: 0 .5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+.product-view .header .ar{
+    text-align: left;
+}
+.product-view .header .en{
+    text-align: right;
+}
+.product-view .header .sort{
+position: relative;
+cursor: pointer;
+}
+.product-view .header  .list-filter{
+    position: absolute;
+    top:100%;
+     background-color:#fff;
+    z-index: 100;
+    padding:10px 30px;
+    border-radius: 3px;
+    margin-top: 5px;
+    box-shadow:5px 5px 10px  var(--gray-3),-5px -5px 10px  var(--gray-3);
+    visibility: hidden;
+    opacity: 0;
+    transition:all .3s ease-in-out;
+
+    }
+    
+    
+    .product-view .header .sort>ul li{
+      text-align: left;
+      line-height: 1.3rem;
+
+    }
+    .product-view .header .sort:hover .list-filter{
+        visibility:visible;
+        opacity:1;
+    }
+    .product-view .product{
+        display: grid;
+          grid-gap: 10px;
+    }
+/* product-view end */
+
+/*  X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+     .product{
+        display: grid;
+
+         grid-template-columns: auto;
+    }
+    .btn-price {
+     width: 50% !important;
+    }
+}
+
+/*  Small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) { 
+     .product{
+        grid-template-columns: repeat(2,1fr);
+   }
+   .btn-price {
+    width: 75% !important;
+   }
+}
+
+/*  Medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) { 
+    .product{
+        grid-template-columns: repeat(3,1fr);
+   }
+   .btn-price {
+    width: 100% !important;
+   }
+ }
+
+/*  Large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) { 
+    .product{
+        grid-template-columns: repeat(4,1fr);
+   }
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+ 

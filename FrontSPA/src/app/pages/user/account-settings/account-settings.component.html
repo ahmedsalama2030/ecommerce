@@ -1,0 +1,46 @@
+<section class="user-profile  mt-sm-2 mt-lg-5 my-3 text-capitalize">
+    <div class="container-box">
+        <div class="row justify-content-between">
+           
+                <div class="col-lg-3 col-12 mt-3 col-md-12 order-md-1 order-2  order-md-2 border text-center">
+                    
+                    <div class="p-2  ">
+                    <img class="border border-black rounded-circle p-1"  #iamgeUser width="100" height="100" [src]="userPhoto"  alt="user-image">
+                </div>
+                <div  class="p-2 border my-1 upload-container ">
+                   <label for="input-upload"> <i class="fas fa-5x icon fa-cloud-upload-alt"></i></label>
+                   <input name="iamge" #file 
+                    ng-mo id="input-upload" class="d-none"  (change)="saveChangeImage(file.files)"  type="file">
+                    <div *ngIf="showUpload"    class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"[style.width]="uploadWidth+'%'"      ></div>
+                      </div>
+                   </div>
+                   <div class="text-center message">
+                    <p>{{uploadMassage}}</p>
+
+                </div>
+                
+                
+               
+              
+            
+            </div>
+       
+            <div class="col-lg-9 col-12  mt-3 col-md-12 order-lg-2 order-1">
+                 <tabset    class="w-50"  >
+                    <tab heading=" {{tab.account}}">
+                         <account></account>
+                    </tab>
+                    <tab heading="{{tab.orders}}"><user-orders [pagination]="userOrderPagination !" [orders]="userOrder"></user-orders></tab>
+                    <tab heading="{{tab.wishlist}}"><user-wish-list></user-wish-list></tab>
+                </tabset>  
+                
+                   
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+ 
+ 

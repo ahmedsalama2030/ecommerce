@@ -1,0 +1,195 @@
+header{
+}
+header li a{
+    color:#000;
+     display:inline-block;
+     text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+ 
+ 
+ }
+ header .menu{
+   
+   background-color: var(--bs-primary);
+   color:#fff;
+   border-radius: 5px 5px 0 0;
+   font-weight: bold;
+   position: relative;
+ 
+ }
+ header .menu span:first-of-type{
+   text-transform: uppercase;
+   cursor: pointer;
+   transition: all .5s ease-in-out;
+   
+ }
+  
+ .menu nav:first-of-type {
+   position: absolute;
+   top:100%;
+   left: 0;
+   z-index: 1105;
+   background-color: #fff;
+   color: #000;
+   width: 100%;
+    border:1px solid var(--gray-3);
+     height: 0;
+     overflow: hidden;
+     transition: height 6s ease-in-out;
+ 
+  } 
+ 
+ .menu nav:first-of-type li a{
+  padding: 10px 20px;
+    width: 100%;
+ }
+ .menu nav:first-of-type li span{
+     text-transform: capitalize;
+    font-weight: normal;
+ }
+ .menu nav:first-of-type li i{
+    width:1.5rem
+ }
+ 
+ .menu nav:first-of-type li a:hover{
+   color: var(--bs-primary);
+ 
+ }
+ header  .links li a:hover{
+ color: var(--bs-primary);
+ border-bottom: 3px solid var(--bs-primary);
+ transition: all .5s ease-in-out ;
+ }
+ .button-navbar{
+   float: right;
+   cursor: pointer;
+ }
+ .menu-container{
+   text-align: center;
+ }
+ 
+ .menu-responsive{
+   
+   position:fixed;
+   top:-0;
+   right:0;
+   background-color: rgb(195 188 188 / 40%);
+   width: 100%;
+   height: 100%;
+    z-index: 2110;
+    transition: all 1s ease-in-out;
+    
+ }
+ .menu-responsive .overlay{
+    background-color:#fff;
+   height:100%;
+   border-radius: 0 10px 10px 0;
+ 
+ }
+ .menu-responsive .overlay h4{
+   text-align: center;
+   text-transform: capitalize;
+    border-bottom: 1px solid var(--gray-3);
+   background-color: var(--bs-primary);
+   color:#fff;
+   font-weight: bold;
+   border-radius: 0 10px 0 0;
+ 
+ }
+ .menu-responsive .overlay nav {
+   padding:10px
+ 
+ }
+ .menu-responsive .overlay nav li{
+   color: #000;
+ }
+ .menu-responsive .overlay nav li a{
+   text-transform: capitalize;
+   font-weight: bold;
+   color:inherit;
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+ 
+ }
+ .menu-responsive .overlay nav li:hover{
+   background-color: var(--bs-primary);
+   color:#fff;
+   border-radius: 5px;
+ 
+ }
+ /* ///////////main */
+ 
+ main.rtl{
+   direction: rtl  !important;
+ }
+ header li a.active{
+    color: var(--bs-primary);
+    border-bottom: 3px solid var(--bs-primary);
+    transition: all .5s ease-in-out ;
+ }
+
+ /* cart start */
+ .cart{
+     position:relative;
+
+ }
+ a.cart:hover,.cart-responsive{
+ color: var(--hover-1);
+ }
+ .cart span{
+     position:absolute;
+     top:-16px;
+     right:-10px;
+     color:#fff;
+     background-color: var(--bs-primary);
+     padding:3px ;
+     border-radius: 50% 50%;
+     font-size: 12px;
+ }
+ .cart-responsive{
+     padding:3px;
+ font-size: 1rem;
+ }
+  
+ 
+ .cart-responsive span{
+     
+     color:#fff;
+    background-color: var(--bs-primary);
+    font-size: .6rem;
+margin: 0 1rem;
+width: 20px;
+display: inline-block;
+text-align: center;
+  }
+ /* cart emd */
+ 
+ .sticky {
+   position: fixed;
+   z-index: 111;
+ top: 0;
+  background-color: #fff;
+  left: 0;
+  width: 100vw;
+  padding: .5rem 2rem ;
+  margin-top: 0px !important;
+  -moz-box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 4px 4px 10px rgb(0 0 0 / 20%);
+  -o-box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  -ms-box-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 4px 4px 10px rgb(0 0 0 / 20%);
+  
+  opacity : 1
+}
+
+#dropdown-basic{
+  border-top:3px solid var(--bs-primary) ;
+  border-bottom:3px solid var(--bs-primary) ;
+  background-color: var(--gray-3);
+}
+#dropdown-basic li a:active,#dropdown-basic li span:active ,
+#dropdown-basic li a:hover,#dropdown-basic li span:hover{
+background-color:var(--bs-primary) ;
+color: #fff;
+}

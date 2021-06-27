@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+ 
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url("~font-awesome/css/all.css");
+@import url("assets/myStyles.css");
+@import "~alertifyjs/build/css/alertify.min.css";
+@import "~alertifyjs/build/css/themes/bootstrap.css";
+  @font-face {font-family:"cairo" ;src: url(./assets/fonts/Cairo-Bold.ttf);} 

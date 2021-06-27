@@ -1,0 +1,184 @@
+{
+    "home": {
+        "home": "الرئيسية",
+        "blog": "المدونة",
+        "shop": "التسوق",
+        "contact us": "إتصل بنا",
+        "categories": "الفئات",
+        "menu": "القائمة",
+        "my account":"حسابى",
+
+        "shoping-cart":"سلة المنتجات"
+    },
+    "titletop": {
+        "hello": "مرحبا",
+        "log in": "تسجيل الدخول",
+        "sign up": "تسجيل جديد",
+        "account setting": "إعدادات الحساب",
+        "log out": "تسجيل الخروج",
+        "don't nave an account": "ليس لدى حساب",
+        "my orders": "طلباتى",
+        "wish list": "القوائم المفضلة",
+        "Cash": "كاش"
+    },
+
+    "footer": {
+        "6 october ,cairo egypt": "٦ أكتوبر,القاهرة, مصر",
+        "find it fast": "روابط أسرع",
+        "Laptop & Computers": "اللابتوبات و الكمبيوترات",
+        "Smart Phone & Tablets": "التليفونات والتابلات",
+        "TV & Audio": "TV & Audio",
+        "Cameras & Photography": "الكاميرات والتصوير",
+        "Accesories": "اكسسوارات",
+        "information": "معلومات",
+        "Find a Store": "ابحث عن متجر",
+        "About Us": "معلومات عنا",
+        "Contact Us": "اتصل بنا",
+        "Delivery information": "معلومات التوصيل",
+        "Customer Care": "إهتمامات العميل",
+         "Privacy Policy": "سياسة الخصوصية",
+         "My Account": "حسابي",
+        "Order History": "تاريخ الطلب",
+        "Wish List": "قائمة المفضلة",
+        "Customer Service": "خدمة العملاء ",
+        "Returns / Exchange": "الأسترجاع / صرف",
+        "sign up to": "إشترك ",
+        "SubscribeTo": "  للحصول على إشعار حول الخصومات و المنتجات الجديدة  ",
+        "Subscribe": "إشترك",
+        "copyright 2019":"حقوق النشر ٢٠٢١",
+        "all rights reserved":"كل الحقوق محفوضة"
+    },
+
+    "shopFilter":{
+        "by category":"بالفئة",
+        "More":"المزيد",
+        "Category":"الفئات",
+        "by price":"بالسعر",
+        "send":"إرسال",
+        "by brand":"بالمركة",
+        "Brands":"المركات",
+        "by color":"باللون",
+        "black":"",
+        "white":"",
+        "blue":"",
+        "grey":"",
+        "red":"",
+        "silver":"",
+        "pink":"",
+        "gold":"",
+        "muli color":" أخرى",
+
+        "products found":"المنتجات الموجودة",
+        "sort by":"ترتيب حسب ",
+        "name":"الاسم",
+        "pricehigh":"الأعلى سعرا",
+        "pricelow":"الأقل سعرا",
+        "no product found":"لا يوجد منتجات"
+       
+    },
+    "account":{
+        "first name":"الأسم الأول",
+        "middel name":"أسم الأب",
+        "last name":"الأسم العائلة",
+        "street":"الشارع",
+        "filed is required":"هذأ الحقل مطلوب",
+        "State":"المحافظة",
+        "city":"المدينة",
+        "phone number":"رقم الهاتف",
+        "email":"الإيميل",
+        "user name":"أسم المستخدم",
+        "password":"كلمة المرور",
+        "send":"إرسال",
+        "email invalid":"الإيميل غير صحيح",
+        
+        "password must has min 4 character":"كلمة المرور اربعة أحرف على الأقل"
+
+       
+    },
+    "checkOut":{
+        "person info":"البيانات الشخصية",
+        "confirm":"تأكيد",
+        "update":"تحديث",
+        "shipping address":"عنوان الشحن",
+        "payment":"الدفع",
+        "Order placed":"أرسال الطلب",
+        "successfully order placed":"تم أرسال الطلب" ,
+        "total price":"السعر الاجمالى",
+        "pay online":"الدفع أون لاين",
+        "pay on delivery":"الدفع عند الأستلام",
+        "Or":"أو"
+            },
+"order":{
+    "product count":"عدد المنتجات",
+    "price":"السعر",
+    "date order":"تاريخ الطلب",
+    "Payment type":"طرق الدفع" 
+},
+"productDetail":{
+    "add to cart":"أضف للعربة",
+    "Satisfaction 100% Guaranteed":"مضمون مائة يالمائة",
+    "days to Return":"أيام للأرتجاع" 
+    
+},
+"shoppingCart":{
+    "shopping card":"سلة المشتروات",
+    "not product found":"لا يوجد منتجات",
+    "summary":"الخلاصة",
+    "total price":"السعر الأجمالى",
+    "Shipping price":"سعر الشحن",
+    "finial price":"السعر الأجمالى",
+    "complete process":"إكمال عملية الشراء" ,
+    "quntity":"الكمية" 
+    
+},
+"auth":{
+    "Cash":"كاش",
+    "Sign In into your account":"سجل الدخول لحسابك",
+    "field is required":" هذأ الحقل مطلوب",
+    "forget password":"نسيت الباسورد",
+    "create new account":"إنشاء حساب جديد",
+    "login":"تسجيل الدخول",
+     "or":"أو",
+     "send":"إرسال",
+    "login in with google":" الدخول بواسطة جوجل",
+    "create new an account":"إنشاء حساب جديد",
+    "email invalid ":" الإيميل غير صحيح",
+    "password must has min 4 character":"عدد الأحرف اربعة على الأقل",
+    "the password and repassword not match":" كلمة المرور وتأكيد كلمو المرور غير صحيح",
+    "have an account":"لدى حساب",
+    "new":"جديد", 
+    "Welcome to Cash":"مرحبا بك فى كاش",
+    "Safe shopping, pay on delivery, fast shipping, easy returns within 15 days":"تسوق آمن، دفع عند الاستلام، شحن سريع، إرجاع سهل خلال 15 يوماً",
+    "shop now":"تسوق الأن"
+     
+},
+"blog":{
+    "more":"المزيد",
+    "A blender is a kitchen and laboratory appliance":"الخلاط هو جهاز مطبخ ومختبر",
+    "22 mar 2021":"٢٢ مارس ٢٠٢١"
+        },
+
+    "best category":"أفضل الفئات",
+    "best seller":"الأفضل مبيعا",
+    "recently viewed products":"النتجات الأكثر رؤية",
+"in progress ,thanks":"فى مرحلة الأنشاء , شكرا",
+     
+    "if you will not change password  do not change filed password(still empty)":"إذا لم تكن تنوى تغير كلمة المرور . أترك حقل كلمة المرور فارغ",
+    "success updated": "نجاح التعديل ",
+    "online":"أون لاين",
+        "on deleivery":"عند الأستلام",
+    
+    "error updated \n may be user name or email found another person":"خطأ فى التعديل . ربما كلمة المرور او الإيميل  محجوز ",
+    "wait":"أنتظر",
+"delete":"حذف",
+"computers":"الكمبيوترات",
+"watchs":"السعات",
+"printers":"الطابعات",
+"headphones":"السمعات",
+"fax machines":"ألات الفاكس",
+"clothings":"الملابس",
+"cameras":"الكاميرات",
+"mobiles":"الموبيلات" 
+
+
+}

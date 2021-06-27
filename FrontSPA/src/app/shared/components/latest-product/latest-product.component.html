@@ -1,0 +1,66 @@
+<!-- setting-section start -->
+
+<section class="setting-section">
+
+  <div class="row">
+    <!--row main start -->
+    <div class="col-12 col-lg-3   order-1  order-lg-0 ">
+      <eg-latest-blog></eg-latest-blog>
+    </div>
+    <div class="col-12 col-lg-9 order-0  order-lg-1 ">
+      <eg-nav-section [name]='Title' (back)='back()' (next)='next()'></eg-nav-section>
+
+
+      <slider
+       (isEnd)='EndScroll($event)'
+      (isStart)='StartScroll($event)'
+     [scrollNext]='scrollNext' >
+<ng-container class="p-1"  #sliderImages  *ngFor="let product of productRecentView;let index=index;let even=even" >
+  <div *ngIf="even"  class="col-12 col-md-6 col-lg-6 col-xl-4 border-split" #image>
+            
+             
+    <div (dblclick)="navigate(productRecentView[index].productId)" class="d-flex text-center box-mini  flex-column flex-md-row align-items-center  p-2 ">
+      <div class="p-2 col-12 col-md-6">
+        <img class="img-fluid" onerror="this.src='assets/img/top/noImage.png'"  [src]='productRecentView[index].productImageMain' alt="">
+      </div>
+      <div class=" p-2 col-12 col-md-6 ">
+        <small class="  mb-2 d-inline-block">{{(authService.dir=='rtl')?productRecentView[index].productCategoryNameAr: productRecentView[index].productCategoryName}}</small>
+        <p class="  p-0 m-0">{{  (authService.dir=='rtl')?productRecentView[index].productNameAr:productRecentView[index].productName}}</p>
+        <p class="mt-2 p-0 m-0">{{productRecentView[index].productShippingPrice}}</p>
+      </div>
+    </div> 
+
+    <div (dblclick)="navigate(productRecentView[index+1].productId)"  class="d-flex text-center mt-md-3 box-mini p-2   mt-4  flex-column flex-md-row align-items-center  ">
+      <div class="  col-12 col-md-6">
+        <img class="img-fluid" onerror="this.src='assets/img/top/noImage.png'"  [src]='productRecentView[index+1].productImageMain' alt="">
+      </div>
+      <div class=" p-2 col-12 col-md-6 ">
+        <small class="  mb-2 d-inline-block">{{(authService.dir=='rtl')?productRecentView[index+1].productCategoryNameAr: productRecentView[index+1].productCategoryName}}</small>
+        <p class="  p-0 m-0">{{  (authService.dir=='rtl')?productRecentView[index+1].productNameAr:productRecentView[index+1].productName}}</p>
+        <p class="mt-2 p-0 m-0">{{productRecentView[index+1].productShippingPrice}}</p>
+      </div>
+    </div>
+
+
+  
+
+ 
+
+
+</div>
+
+</ng-container>
+
+      </slider>
+     
+
+    </div>
+  </div>
+  <!--row main end -->
+
+
+
+
+
+</section>
+<!-- setting-section start -->

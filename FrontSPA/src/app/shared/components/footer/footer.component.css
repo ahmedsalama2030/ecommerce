@@ -1,0 +1,77 @@
+ 
+
+footer  {
+background-color:var(--gray-5);
+padding: 5rem 1rem;
+}
+footer h4{
+    text-transform: capitalize;
+    margin-bottom:1rem;
+}
+footer p {
+     font-weight: bold;
+    color:var(--gray-2);
+    font-size: 14px;;
+}
+footer>div:first-of-type{
+    flex-grow: 10;
+}
+footer .copy-right a{
+color:var(--bs-primary);
+}
+footer nav a{
+
+    color:var(--gray-2);
+    font-weight: bold;
+    line-height: 2rem;
+}
+footer nav a:hover{
+    color:var(--bs-primary);
+
+}
+ 
+ 
+
+footer div:last-of-type>input{
+    border:0;
+    outline:0;
+    padding:10px;
+    width: 60%;
+    border: 2px solid transparent;
+    color:var(--gray-2);
+    font-weight: bold;
+
+}
+footer div:last-of-type>input:focus{
+border: 2px solid var(--bs-primary);
+}
+footer div:last-of-type>a{
+
+    padding: 10px;
+    color: #fff;
+    background: var(--bs-primary);
+    border-radius: 0 20px   20px 0;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-weight: bold;
+
+
+}
+footer div:last-of-type>a:hover{
+    background: var(--hover-1);
+}
+footer div:last-of-type>a.ltr{    
+    border-radius: 0 20px   20px 0;
+}
+footer div:last-of-type>a.rtl{
+    border-radius: 20px 0 0 20px;
+
+}
+footer div:last-of-type>input.rtl{    
+    border-radius:  0 20px   20px 0;
+
+}
+footer div:last-of-type>input.ltr{
+    border-radius: 20px 0 0 20px;
+
+}

@@ -1,0 +1,23 @@
+.setting-section .header {
+    position: relative;
+    padding: .8rem 0;
+    margin: 2rem 0;
+}
+   .setting-section .header::after{
+        
+    width: 40%;
+     }
+ .card {
+     overflow:hidden;
+ }
+ .card img{
+         width:100%;
+
+ }
+ a{
+     color:#fff;
+ }
+ .card-text:hover{
+color:var(--bs-primary);
+
+ }

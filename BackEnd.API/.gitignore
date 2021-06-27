@@ -1,0 +1,6 @@
+ 
+appsettings.json
+appsettings.Development.json
+PublishProfiles
+*.db
+*.json

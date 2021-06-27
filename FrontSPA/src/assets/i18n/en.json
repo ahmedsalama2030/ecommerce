@@ -1,0 +1,181 @@
+{
+    "home": {
+        "home": "home",
+        "blog": "blog",
+        "shop": "shop",
+        "contact us": "contact us",
+        "categories": "categories",
+        "menu": "menu",
+        "my account":"my account",
+        "shoping-cart":"shoping cart"
+    },
+    
+    "titletop": {
+        "hello": "hello",
+        "log in": "log in",
+        "sign up": "sign up",
+        "account setting": " account setting",
+        "log out": "log out",
+        "don't nave an account": "don't nave an account",
+        "my orders": "my orders",
+        "wish list": "wish list",
+        "Cash": "Cash"
+    },
+    "footer": {
+        "6 october ,cairo egypt": "6 october ,cairo egypt",
+        "find it fast": "find it fast",
+        "Laptop & Computers": "Laptop & Computers",
+        "Smart Phone & Tablets": "Smart Phone & Tablets",
+        "TV & Audio": "TV & Audio",
+        "Cameras & Photography": "Cameras & Photography",
+        "Accesories": "Accesories",
+        "information": "information",
+        "Find a Store": "Find a Store",
+        "About Us": "About Us",
+        "Contact Us": "Contact Us",
+        "Delivery information": "Delivery information",
+        "Privacy Policy": "Privacy Policy",
+        "Customer Care": "Customer Care",
+        "My Account": "My Account",
+        "Order History": "Order History",
+        "Wish List": "Wish List",
+        "Customer Service": "Customer Service",
+        "Returns / Exchange": "Returns / Exchange",
+        "sign up to": "sign up to",
+        "SubscribeTo": "Subscribe to  get notification about information discount and new item",
+        "Subscribe": "Subscribe",
+        "copyright 2019": "copyright 2019",
+        "all rights reserved": "all rights reserved"
+    },
+    "shopFilter": {
+        "by category": "by category",
+        "More": "More",
+        "Category": "Category",
+        "by price": "by price",
+        "send": "send",
+        "by brand": "by brand",
+        "Brands": "Brands",
+        "by color": "by color",
+        "black": "black",
+        "white": "white",
+        "blue": "blue",
+        "grey": "grey",
+        "red": "red",
+        "silver": "silver",
+        "pink": "pink",
+        "gold": "gold",
+        "muli color": "muli color",
+        "products found": "products found",
+        "sort by": "sort by",
+        "name": "name",
+        "pricehigh": "price high",
+        "pricelow": "price low",
+        "no product found": "no product found"
+    },
+    "account": {
+        "first name": "first name",
+        "middel name": "father name",
+        "last name": "last name",
+        "street": "street",
+        "filed is required": "filed is required",
+        "State": "State",
+        "city": "city",
+        "phone number": "phone number",
+        "email": "email",
+        "user name": "user name",
+        "password": "password",
+        "send": "send",
+        "email invalid": "email invalid",
+         "password must has min 4 character": "password must has min 4 character"
+
+    },
+    "checkOut":{
+"person info":"person info",
+"confirm":"confirm",
+"update":"update",
+"shipping address":"shipping address",
+"payment":"payment",
+"Order placed":"Order placed",
+"successfully order placed":"successfully order placed" ,
+"total price":"total price",
+"pay online":"pay online",
+"pay on delivery":"pay on delivery",
+"Or":"Or "
+
+ 
+ 
+    },
+    "order":{
+        "product count":"product count",
+        "price":"price",
+        "date order":"date order",
+        "Payment type":"Payment type" 
+    },
+    "productDetail":{
+        "add to cart":"add to cart",
+        "Satisfaction 100% Guaranteed":"Satisfaction 100% Guaranteed",
+        "days to Return":"days to Return" 
+        
+    },
+    "shoppingCart":{
+        "shopping card":"shopping card",
+        "not product found":"not product found",
+        "summary":"summary",
+        "total price":"total price",
+        "Shipping price":"Shipping price",
+        "finial price":"finial price",
+        "complete process":"complete process",
+        "quntity":"quntity" 
+        
+    }
+,
+    "blog":{
+"more":"more",
+"A blender is a kitchen and laboratory appliance":"A blender is a kitchen and laboratory appliance",
+"22 mar 2021":"22 mar 2021"
+    },
+     "auth":{
+         "Cash":"Cash",
+         "Sign In into your account":"Sign In into your account",
+         "field is required":" field is required",
+         "forget password":"forget password",
+         "create new account":"create new account",
+         "login":"login",
+         "send":"send",
+          "or":"or",
+         "login in with google":"login with google",
+         "create new an account":"create new an account",
+         "email invalid ":" email invalid ",
+         "password must has min 4 character":"password must has min 4 character",
+         "the password and repassword not match":"the password and repassword not match",
+         "have an account":"have an account",
+         "new":"new ",
+         "Welcome to Cash":"Welcome to Cash",
+         "Safe shopping, pay on delivery, fast shipping, easy returns within 15 days":"Safe shopping, pay on delivery, fast shipping, easy returns within 15 days",
+         "shop now":"shop now"
+          
+     }
+,
+    
+    "best category": "best category",
+    "best seller": "best Seller",
+    "recently viewed products": "recently viewed products",
+    "if you will not change password  do not change filed password(still empty)": "if you will not change password  do not change filed password(still empty)",
+    "success updated": "success updated",
+    "online":"online",
+    "on deleivery":"on deleivery",
+"in progress ,thanks":"in progress ,thanks",
+
+    "error updated \n may be user name or email found another person": "error updated \n may be user name or email found another person",
+"wait":"wait",
+"delete":"delete",
+"computers":"computers",
+"watchs":"watch",
+"printers":"printer",
+"headphones":"headphones",
+"fax machines":"fax machine",
+"clothings":"clothing",
+"cameras":"camera",
+"mobiles":"mobiles" 
+
+}

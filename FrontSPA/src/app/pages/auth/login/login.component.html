@@ -1,0 +1,61 @@
+<div class="form text-center text-capitalize">
+    <a  [routerLink]="[ '/' ]" class="logo" translate>auth.Cash </a>
+    <h3 translate>auth.Sign In into your account</h3>
+    <form  (ngSubmit)="Onlogin()" #login="ngForm">
+ 
+      <div class="mb-3"  > 
+        <input name="userName" #userName="ngModel" [(ngModel)]="loginform.userName"  type="text" class="form-control  " placeholder={{userNamePlace}}  required />
+        
+        <div *ngIf="userName.invalid && userName.touched" class="text-danger" translate> 
+          auth.field is required
+        </div> 
+      </div>
+      <div class="mb-3">
+        <input name="password" #password="ngModel" [(ngModel)]="loginform.password"  type="password" class="form-control" placeholder={{passwordPlace}} required  /> 
+
+        <div *ngIf="password.invalid && password.touched" class="text-danger" translate>
+          auth.field is required
+        </div>
+         </div>
+         <div   class="text-danger" translate >{{errorMassage}}</div>
+      
+      <div class="mb-1 forgot ">
+       <a href="#"  translate>auth.forget password</a>
+        </div>
+        <div class="mb-3 forgot ">
+            <span class="d-block d-lg-none" (click)="goRegiser()"translate >
+              auth.create new account</span>
+             </div>
+             
+      <button [disabled]="!login.valid ||loader" type="submit" class="btn submit">
+        <span [hidden]="loader" class="px-2">
+          <span translate class="text-capitalize" translate>auth.login</span>
+      </span>
+
+        <span translate [hidden]="!loader" >
+          <i translate class="mx-1">wait</i>
+          <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+        </span>
+
+      </button>
+      <div class="  forgot text-center my-3 ">
+       <span    class="d-block "  translate>auth.or</span>
+         </div>
+         <div class="d-flex login-social justify-content-center">
+      <button (click)="externalLogin()" [disabled]=" loaderGoogle" type="button"  class="btn w-100 submit">
+        <span [hidden]="loaderGoogle" class="px-2">
+          <span   class="text-capitalize"  > 
+            <i class="fab fa-google"> </i> <span translate>auth.login in with google</span> 
+                    </span>
+      </span>
+
+        <span   [hidden]="!loaderGoogle" >
+          <i translate class="mx-1">wait</i>
+                    <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+        </span>
+
+      </button> 
+       
+    </div>
+    </form>
+  </div>

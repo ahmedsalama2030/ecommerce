@@ -1,0 +1,228 @@
+:root{
+    --bs-primary:#F8694A;
+    --gray-1:#f2f2f2;
+    --gray-2:#8d8989;
+    --gray-3:#ebebeb;
+    --gray-4:#b7b7b7;
+    --gray-5:#f0f2f9;
+    --grar-6:#4c4c4c;
+ --hover-1:#a12e14;
+}
+html{
+    overflow-x: hidden;
+}
+
+ body{
+     overflow-x: clip;
+     font-size: 14px;
+     position:relative;
+    
+   }
+   .alertify-notifier .ajs-message.ajs-error,.alertify-notifier .ajs-message.ajs-success{
+    background: var(--bs-primary) !important; 
+
+   }
+   .alertify-notifier{
+     text-transform: capitalize;
+   }
+a{
+    text-decoration: none;
+    color:#000
+}
+ul,nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.container-fluid{
+    padding: 0;
+    margin:0;
+}
+.main-container{
+    padding: 0 30px;
+    margin:auto
+}
+ 
+.rtl{
+    direction: rtl  !important;
+}
+.ltr{
+    direction: ltr  !important;
+}
+*{
+    font-family: cairo;
+ }
+ .rtl .form-control.is-valid, .rtl .was-validated .form-control:valid{
+    background-position: left calc(.375em + .1875rem) center;
+ }
+ .notFount{
+     color: var(--bs-primary); 
+     text-transform:capitalize ;
+ }
+
+ .rtl  .border-split {
+border-left: 16px solid #fff;
+ }
+ .ltr .border-split {
+    border-right: 16px solid #fff;
+     }
+  
+/* ////setting-section/// */
+
+.setting-section{
+    overflow: visible;
+    margin:2rem 0;
+
+     }
+    .setting-section .header{
+        position: relative;
+        padding: .8rem 0;
+        margin: 2rem 0;
+
+    }
+    .setting-section .header h5{
+         text-transform: capitalize
+     }
+    .setting-section .header span i{
+    padding:7px 10px;
+    background-color: var(--gray-3);
+    margin: 0 5px;
+    cursor: pointer;
+    }
+    .setting-section .header span i:hover{
+    background-color: var(--bs-primary);
+    color:#fff;
+    }
+    
+    .setting-section .header::before{
+     content: "";
+    position: absolute;
+    bottom:0;
+      width: 100%;
+    height: 2px;
+    background-color: var(--gray-1);
+     
+    }
+    .setting-section .rlt::before{
+        right:0;
+    }
+    .setting-section .ltr::before{
+        left:0;
+     }
+    .setting-section .header::after{
+        content: "";
+    position: absolute;
+    bottom:0;
+     width: 10%;
+    height: 3px;
+    background-color: var(--bs-primary);
+     }
+     @media (max-width:576px){
+        .setting-section .header::after{
+            width: 50%;
+
+        }
+     }
+     .setting-section .rlt::after{ 
+        right:0;
+            }
+            .setting-section .ltr::after{
+                left:0;
+                    }
+/* ////end setting-section/// */
+  .cart-button{
+ padding: 10px 10px;
+ background-color:var(--bs-primary);
+ color:#fff;
+ border-radius: 20px  ;
+ text-transform: uppercase;
+ font-weight: bold;
+ cursor: pointer;
+ }
+ .cart-button:hover{
+background-color: #a12e14;
+ }
+
+
+ /* scroll */
+ /* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */ 
+  ::-webkit-scrollbar-thumb {
+  background: var(--bs-primary); 
+  border-radius:20px
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover-1); 
+}
+
+ /* ////// tab Auth/////// */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color:var(--bs-primary);
+}
+.nav .nav-link {
+    font-weight:bold;
+
+}
+.nav .nav-link:hover{
+    color:#000;
+}
+.nav-pills .nav-link.active:hover{
+    color: #fff;
+
+}
+
+/* //////////login///////// */
+.form-control{
+    border-radius: 50px;
+}
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: 0 0 4px 0.1rem var(--bs-primary);
+}
+ 
+/* // gallary component ==> product details  /// */
+.ngx-gallery-thumbnail   
+{
+border:0px !important;
+
+ }
+ .ngx-gallery-thumbnail-size-cover{
+    box-shadow: 1px 1px 3px  var(--gray-4), -1px -1px 3px   var(--gray-4);
+
+ }
+ .ngx-gallery-image-wrapper {
+border: 1px solid var(--gray-4);
+box-shadow: 1px 1px 3px  var(--gray-4), -1px -1px 3px   var(--gray-4);
+
+ }
+/* pagination */
+.page-link,.pagination-prev .page-link{
+    color:#000
+}
+ .page-item.active .page-link  {
+    
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+ }
+ .page-link:hover{
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color:#fff;
+ }
+ .rightPosition{
+     right: 0;
+ }
+ .leftPosition{
+    left: 0;
+}

@@ -1,0 +1,136 @@
+<div class="account-user  bg-light p-1 p-md-3 p-lg-5 pt-0 text-capitalize">
+  <div class="row justify-content-center  bg-light text-capitalize">
+    <div class="person-info col-sm-12 col-md-10">
+      <div  [ngClass]="{'alert-success': !showMassageError,'alert-danger': showMassageError,'alert-info': infoMessage}"    class="alert  text-center" role="alert" [innerHTML]="message | translate"  >
+       </div>
+      <form (ngSubmit)="submit()" [formGroup]="accountForm">
+        <input SpaceValidator  InputTirmFilter type="hidden"formControlName="id" name="id">
+        <div class="row">
+          <div class="mb-3 col-12 col-md-6 col-lg-4">
+            <label for="firstName" class="form-label" translate>account.first name</label> 
+            <input  InputTirmFilter formControlName="firstName" 
+            [ngClass]="{'is-invalid':firstName?.errors&&firstName?.touched,'is-valid':!firstName?.errors&&firstName?.touched}"
+            type="text" class="form-control" id="firstName">
+            <div class="invalid-feedback" *ngIf="firstName?.touched && firstName?.hasError('required')" translate>
+              account.filed is required </div>
+
+          </div>
+          <div class="mb-3 col-12  col-md-6 col-lg-4">
+            <label for="middelName" class="form-label"translate>account.middel name</label>
+            <input  InputTirmFilter formControlName="middelName" name="midelName" type="text" cla [ngClass]="{'is-invalid':middelName?.errors&&middelName?.touched,'is-valid':!middelName?.errors&&middelName?.touched}" class="form-control" 
+            
+            id="middelName">
+            <div class="invalid-feedback" *ngIf="middelName?.touched && middelName?.hasError('required')" translate>
+              account.filed is required </div>
+          </div>
+          <div class="mb-3 col-12 col-md-6 col-lg-4">
+            <label for="lastName" class="form-label" translate>account.last name</label>
+            <input  InputTirmFilter formControlName="lastName" name="lastName"
+            [ngClass]="{'is-invalid':lastName?.errors&&lastName?.touched,'is-valid':!lastName?.errors&&lastName?.touched}"
+            type="text" class="form-control" id="lastName" required>
+            <div class="invalid-feedback" *ngIf="lastName?.touched && lastName?.hasError('required')" translate>
+              account.filed is required </div>
+
+          </div>
+        
+
+
+
+        
+          <div class="form-group col-12  col-md-6 col-lg-4">
+            <label for="input  InputTirmFilterCity" translate>account.street</label>
+            <input  InputTirmFilter formControlName="street" name="street" type="text" class="form-control" id="input  InputTirmFiltercountry"
+            [ngClass]="{'is-invalid':street?.errors&&street?.touched,'is-valid':!street?.errors&&street?.touched}"
+            required>
+            <div class="invalid-feedback" *ngIf="street?.touched && street?.hasError('required')" translate>
+              account.filed is required </div>
+
+          </div>
+
+          <div class="form-group col-12  col-md-6 col-lg-4">
+            <label for="input  InputTirmFilterZip" translate>account.State</label>
+            <input  InputTirmFilter formControlName="state" 
+            [ngClass]="{'is-invalid':state?.errors&&state?.touched,'is-valid':!state?.errors&&state?.touched}"
+            name="state" type="text" class="form-control" id="input  InputTirmFilterState" required>
+            <div class="invalid-feedback" *ngIf="state?.touched && state?.hasError('required')" translate>
+              account.filed is required </div>
+          </div>
+         
+        <div class="form-group col-12  col-md-6 col-lg-4">
+          <label for="input  InputTirmFilterZip" translate>account.city</label>
+          <input  InputTirmFilter name="city" 
+          [ngClass]="{'is-invalid':city?.errors&&city?.touched,'is-valid':!city?.errors&&city?.touched}"
+          formControlName="city" type="text" class="form-control" id="city">
+          <div class="invalid-feedback" *ngIf="city?.touched && city?.hasError('required')" translate>
+            account.filed is required </div>
+        </div>
+      
+
+
+       
+          <div class="mb-3 col-12  col-md-6 col-lg-4">
+            <label for="phoneNumber" class="form-label"translate>account.phone number</label>
+            <input  InputTirmFilter name="phoneNumber" formControlName="phoneNumber" type="number" class="form-control" 
+            [ngClass]="{'is-invalid':phoneNumber?.errors&&phoneNumber?.touched,'is-valid':!phoneNumber?.errors&&phoneNumber?.touched}"
+            id="phoneNumber">
+            <div class="invalid-feedback" *ngIf="phoneNumber?.touched && phoneNumber?.hasError('required')" translate>
+              account.filed is required </div>
+          </div>
+
+          
+       
+          <div class="mb-3 col-12  col-md-6 col-lg-4">
+            <label for="userName" class="form-label" translate>account.user name </label>
+
+            <input  InputTirmFilter formControlName="userName" type="text" class="form-control"
+              [ngClass]="{'is-invalid':userName?.errors&&userName?.touched,'is-valid':!userName?.errors&&userName?.touched}">
+            <div class="invalid-feedback" *ngIf="userName?.touched && userName?.hasError('required')" translate>
+              account.filed is required </div>
+          </div>
+
+          <div class="mb-3 col-12  col-md-6 col-lg-4">
+            <label for="password" class="form-label" translate>account.password </label>
+            <input  InputTirmFilter formControlName="password" name="password" type="password" 
+            [ngClass]="{'is-invalid':password?.errors&&password?.touched,'is-valid':!password?.errors&&password?.touched}"
+            class="form-control" id="password" >
+            <div class="invalid-feedback" *ngIf="password?.touched && password?.hasError('required')" translate>
+              account.filed is required </div>
+              <div class="invalid-feedback" *ngIf="password?.touched && password?.hasError('minlength')" translate>
+                account.password must has min 4 character </div>
+          </div>
+
+          <div class="mb-3 col-12  col-md-6  ">
+            <label for="email" class="form-label" translate>account.email </label>
+            <input  InputTirmFilter formControlName="email"  
+             [ngClass]="{'is-invalid':email?.errors&&email?.touched,'is-valid':!email?.errors&&email?.touched}"
+            
+            name="email" type="email" class="form-control" id="email" >
+            <div class="invalid-feedback" *ngIf="email?.touched && email?.hasError('required')" translate> account.filed is
+              required </div>
+            <div class="invalid-feedback" *ngIf="email?.touched && email?.hasError('pattern')" translate> account.email invalid
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="mb-3">
+
+          <button type="submit" [disabled]="!accountForm.valid ||loader" class="btn" translate>
+             <span [hidden]="loader" class="px-2">
+              <span translate class="text-capitalize" translate>account.send</span>
+          </span>
+          <span translate [hidden]="!loader" >
+              <i translate class="mx-1">wait</i>
+              <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+            </span>
+          </button>
+          <!--   -->
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+
+</div>

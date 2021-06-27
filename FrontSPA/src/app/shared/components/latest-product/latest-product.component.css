@@ -1,0 +1,40 @@
+
+.box-mini:hover{
+    border-color: var(--bs-primary);
+    }
+    .box-mini{
+        border:1px solid var(--gray-4);
+        transition: border .2s ease-in-out;
+    }
+ .box{
+    flex: 0 0 auto;
+    width: 32%;
+    margin:0 1%;
+ }
+
+ @media (max-width: 992px){
+.box {
+    flex: 0 0 auto;
+    width: 49%;
+    margin:0 1%;
+
+}
+ }
+  
+ @media (max-width: 768px){
+    .box {
+        flex: 0 0 auto;
+            width: 99%;
+            margin:0 1%;
+        
+    
+    }
+     }
+     @media (max-width: 568px){
+        .box{
+            flex: 0 0 auto;
+            width: 95%;
+            margin:0 5%;
+        
+        }
+         }

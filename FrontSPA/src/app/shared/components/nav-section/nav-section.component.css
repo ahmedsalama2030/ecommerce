@@ -1,0 +1,4 @@
+.active i{
+    background-color: var(--bs-primary);
+    color:white
+}

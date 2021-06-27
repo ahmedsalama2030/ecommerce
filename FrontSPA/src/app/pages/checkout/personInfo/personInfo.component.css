@@ -1,0 +1,11 @@
+.form-control{
+    border-radius: 0;
+}
+.btn{
+    background-color: var(--bs-primary);
+    color:#fff
+}
+.btn:hover{
+    background-color: var(--hover-1);
+
+}

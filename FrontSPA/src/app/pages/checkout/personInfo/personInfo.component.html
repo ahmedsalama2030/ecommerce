@@ -1,0 +1,60 @@
+<div class="row justify-content-center  bg-light text-capitalize my-2 my-md-5">
+  <div class="person-info col-sm-12 col-md-6 p-3 w-75">
+
+      <h5 class="text-center" translate>checkOut.person info</h5>
+      <div class="form-row row  p-3">
+      <div class="mb-3 col-12 col-md-6 col-lg-4">
+        <label for="firstName" class="form-label"translate>account.first name</label>
+        <input name="firstName"    type="text" class="form-control"
+          id="firstName" disabled  value="{{user.firstName}}">
+       
+      </div>
+      <div class="mb-3 col-12 col-md-6 col-lg-4">
+        <label for="firstName" class="form-label"translate>account.middel name</label>
+        <input name="firstName"    type="text" class="form-control"
+          id="firstName" disabled  value="{{user.middelName}}">
+       
+      </div>
+      <div class="mb-3 col-12 col-md-6 col-lg-4">
+        <label for="lastName" class="form-label"translate>account.last name</label>
+        <input name="lastName"  type="text" class="form-control"
+          id="lastName" disabled  value="{{user.lastName}}">
+          
+      </div>
+   
+    
+      
+        <div class="  col-12 col-md-6 col-lg-4">
+          <label for="inputCity"  class="form-label" translate>account.State</label>
+          <input name="state" type="text" class="form-control" id="inputcountry"disabled  value="{{user.state}}" >
+          
+        </div>
+        <div class=" col-12 col-md-6 col-lg-4 mb-3">
+          <label for="inputZip"  class="form-label" translate>account.city  </label>
+          <input  name="city" type="text" class="form-control" id="inputcity"  disabled  value="{{user.city}}" >
+         
+        </div>
+        <div class="  col-12 col-md-6 col-lg-4">
+          <label for="inputZip"  class="form-label" translate>account.street</label>
+          <input name="State" disabled  value="{{user.street}}"  type="text" class="form-control" id="inputState" >
+        
+        </div>
+       
+        <div class="mb-3 col-12 col-md-6 col-lg-4">
+          <label for="phoneNumber" class="form-label"translate>account.phone number</label>
+          <input name="phoneNumber"   type="text" class="form-control"
+            id="phoneNumber"disabled  value="{{user.phoneNumber}}" >
+            
+        </div>
+      </div>
+      
+      <div class="mb-3 text-center">
+        
+        <button type="button" (click)="confirm()"   class="btn text-capitalize my-1"translate>checkOut.confirm</button>
+        <a type="button" [routerLink]="[ '/user' ]" class="btn mx-2 text-capitalize my-1"translate>checkOut.update</a>
+        <!--   -->
+      </div>
+      
+     
+  
+</div>

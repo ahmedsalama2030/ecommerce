@@ -1,0 +1,61 @@
+<div class="row justify-content-center mb-5">
+  <div class="col-sm-12 col-md-6 p-0">
+ 
+
+    <div class="cell box-main box-card" id=" box-card">
+ 
+      <form (ngSubmit)="onSubmit()" >
+ 
+        <fieldset>
+          <legend class="card-only" data-tid="elements_examples.form.pay_with_card">
+            <h6 class="text-center"translate> <i translate>checkOut.total price</i>:<span class="price form-label"> {{authService.sitelang=='ar'?
+                (totalPrice)?.toLocaleString('ar-EG') +" جنية " :(totalPrice) +" EGP"}}</span></h6>
+          </legend>
+          <legend class="payment-request-available" data-tid="elements_examples.form.enter_card_manually"translate>checkOut.Or enter card
+            details</legend>
+          <div class="container">
+            <!-- Card -->
+            <div #cardInfo class="my-1"></div>
+            <div class="text-center text-capitalize text-danger">{{message}}</div>
+              <div class=" row justify-content-center">
+            
+              <button (click)="loadPayOnline()" class="btn  w-50 my-2 mx-1" type="submit">
+
+                <span [hidden]="loader" class="px-2">
+                  <span  class="text-capitalize"translate>checkOut.pay online</span>
+
+                </span>
+
+                <span  [hidden]="!loader">
+                  <span translate>wait</span>
+                  <i   class="fa fa-spinner fa-spin mx-2" aria-hidden="true"></i>
+                </span>
+
+              </button>
+              <p class="text-center"translate>checkOut.Or</p>
+
+              <button (click)="loadDelivery()" class="btn w-50  mb-5" type="button">
+              <span [hidden]="loaderOnDelivery" class="px-2">
+                  <span  class="text-capitalize"translate>checkOut.pay on delivery</span>
+                </span> 
+
+                <span  [hidden]="!loaderOnDelivery">
+                  <span translate>wait</span>
+                  <i   class="fa fa-spinner fa-spin mx-2" aria-hidden="true"></i>
+                </span>
+
+              </button>
+            </div>
+
+          </div>
+        </fieldset>
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+
+</div>

@@ -1,0 +1,65 @@
+  .row{
+     min-height: 100vh;
+  }
+
+  /* bg-container */
+ .bg-container{
+    position: relative;
+
+ }
+ .rtl .bg-img{
+   border-radius:  0 100% 100% 0  ;
+
+ }
+ .ltr .bg-img{
+   border-radius: 100% 0 0 100%;
+
+}
+ .auth .bg-img{
+  background: rgba(0, 0, 0, 0.04) url('../../../assets/img/auth/auth.jpg') top left repeat;
+    background-size: cover;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+     text-align: left;
+    z-index: 999;
+    opacity: 1;
+    position: absolute;
+    padding: 30px 30px;
+ }
+.bg-container .info{
+color: #fff;
+margin: 0 20px 0 70px;
+}
+ .info .buttons span{
+color: #fff;
+padding: 3px 30px;
+margin: 3px;
+text-transform: capitalize;
+background-color: var(--hover-1);
+
+}
+.info .buttons span.active{
+    background-color: var(--bs-primary);
+
+}
+.info .header{
+margin: 10px  0px;
+}
+.info .text{
+    line-height: 30px;
+} 
+.shopnow{
+   color: #fff;
+   background-color:var(--bs-primary);
+   border: 0;
+   outline: 0;
+   box-shadow:0;
+  }
+ .shopnow:hover{
+    background-color:var(--hover-1)
+  }
+  .btn:focus{
+   box-shadow:0 0 0 0 ;
+
+  }

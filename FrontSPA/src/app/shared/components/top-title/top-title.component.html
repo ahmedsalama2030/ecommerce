@@ -1,0 +1,37 @@
+<!-- top-title start -->
+<section   class="top-title" [ngClass]="authService.dir">
+    <div class="row  mx-0 px-5 py-1 ">
+        <div   class="col-12 col-sm-12 col-md-6 col-lg-6 px-0 mx-0 text-center " [ngClass]="{'text-md-start': authService.dir=='ltr','text-md-end': authService.dir=='rtl'}">
+            <i class="fa fa-mobile" aria-hidden="true"></i>
+            <span class="mx-2">01027409328</span>
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span class="mx-2">ahmed.salama.ali.ramadan@gmail.com</span>
+        </div>
+        <div  class="col-12 col-sm-12 col-md-6 col-lg-6 justify-content-end  ">
+            <nav  class="d-flex justify-content-center justify-content-md-end    text-capitalize"
+                 >
+                
+                <li   class="text-uppercase"><span  >EGP</span>
+                   
+                </li>
+
+                 <li   class=""><span (click)="changeLang()" >{{lang}}</span></li>
+                 
+            </nav> 
+        </div> 
+    </div>
+    <div class="row " [ngClass]="authService.dir">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 logo text-center text-capitalize">
+         <a class="site-Logo" [routerLink]="['/']" > <span translate>titletop.Cash</span></a></div>
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8 d-none d-sm-none d-md-block d-lg-block search    ">
+            <div class="search-btn">
+                <input type="search" placeholder="{{authService.sitelang==='en'?'Search Products':'البحث فى المنتجات'}}"   />
+                <span><i class="fa fa-search icon-search" aria-hidden="true"></i></span>   
+              
+                 
+            </div>
+           
+               
+         </div>
+    </div>
+</section><!-- top-title end -->

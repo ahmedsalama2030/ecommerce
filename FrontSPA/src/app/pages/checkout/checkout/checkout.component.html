@@ -1,0 +1,27 @@
+<section class="checkout">
+  <div class="container">
+    <div class="row py-5">
+      <div>
+
+        <ul class="step  ">
+          <li [ngClass]="{'active': start,'step-active':personInfoStatus}" translate> checkOut.shipping address </li>
+          <li [ngClass]="{'active': personInfoStatus,'step-active':payStatus}" translate>checkOut.payment</li>
+          <li [ngClass]="{'active': payStatus}"translate>checkOut.Order placed</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <eg-personInfo (personInfoStatus)="personInfoStatusChange($event)" *ngIf="start&&!personInfoStatus"></eg-personInfo>
+    <eg-payment [totalPrice]="totalPrice" (successPaid)="payStatusChange($event)" *ngIf="personInfoStatus&&!payStatus"></eg-payment>
+
+    <div *ngIf="payStatus" class="row  my-5 justify-content-center  bg-light text-capitalize">
+      <div class="col-6 ">
+        <h3 class="text-center succesfully" translate>checkOut.successfully order placed </h3>
+      </div>
+    </div>
+
+
+  </div>
+
+</section>

@@ -1,0 +1,22 @@
+.scroll-to-top {
+    position: fixed;
+    bottom:50px;
+    right: 15px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    background-color:var(--bs-primary);
+     
+    z-index:1110;
+     color:#fff;
+   }
+   .show-scrollTop {
+    opacity: 1;
+    transition: all .2s ease-in-out;
+   }
+   a{
+       color:#fff
+}
+.btn:hover{  
+    color:#fff;
+background-color: var(--hover-1);
+}
