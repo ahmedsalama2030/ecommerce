@@ -50,7 +50,7 @@
   | Todo | Inprogress | Done|
 | ------   | ------ | ------ |
 |  |  |Upload server MyASp.net
-|  |  |change methos paymnet in api
+|  |  |change methods paymnet in api
 |change animation  Carousel (home page front) | |
 |complete navigate arrow function (front) | |
 | | grid filter page error (front) |
